@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roberts Entrümpelung & Haushaltsauflösung – Ganz Niedersachsen</title>
+<meta name="description" content="Professionelle Entrümpelung & Haushaltsauflösung in ganz Niedersachsen. Diskret, besenrein, Festpreis. Kostenlose Beratung vor Ort. 0177 213 1840">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #6abf2e;
+    --green-dark: #4e9420;
+    --navy: #1a2535;
+    --navy-light: #243044;
+    --white: #ffffff;
+    --light-bg: #f5f7f2;
+    --gray: #6b7280;
+    --text: #1a2535;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== TOP BAR ===== */
+  .topbar {
+    background: var(--navy);
+    color: white;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left { display: flex; gap: 24px; align-items: center; }
+  .topbar a { color: white; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .topbar a:hover { color: var(--green); }
+  .topbar-right { color: var(--green); display: flex; align-items: center; gap: 6px; font-weight: 700; }
+
+  /* ===== NAV ===== */
+  nav {
+    background: white;
+    border-bottom: 3px solid var(--green);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--navy);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+  .nav-logo span { color: var(--green); }
+  .logo-badge {
+    background: var(--navy);
+    color: white;
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    border: 2px solid var(--green);
+  }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--navy);
+    font-weight: 600; font-size: 15px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    transition: background 0.2s, transform 0.2s !important;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--green-dark) !important; transform: translateY(-1px); }
+
+  /* ===== CONTAINER ===== */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--light-bg);
+    padding: 70px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(106,191,46,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 2px solid var(--green);
+    color: var(--navy);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-badge .dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.0;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--green); }
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 32px;
+    max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+  .btn-primary {
+    background: var(--green);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(106,191,46,0.35);
+  }
+  .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .btn-secondary {
+    background: white;
+    color: var(--navy);
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 2px solid var(--navy);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { background: var(--navy); color: white; }
+  .hero-trust {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .trust-item .icon { color: var(--green); font-size: 16px; }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .hero-logo-img {
+    max-width: 360px;
+    width: 100%;
+    filter: drop-shadow(0 8px 30px rgba(0,0,0,0.15));
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .hero-badge-card {
+    background: var(--navy);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .hero-badge-card .check { color: var(--green); font-size: 20px; }
+
+  /* ===== SECTION LABEL ===== */
+  .section-label {
+    display: inline-block;
+    background: var(--light-bg);
+    border: 1.5px solid var(--green);
+    color: var(--navy);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .section-title em { font-style: normal; color: var(--green); }
+  .section-sub { font-size: 17px; color: var(--gray); line-height: 1.6; max-width: 600px; margin: 0 auto; }
+  .text-center { text-align: center; }
+
+  /* ===== LEISTUNGEN ===== */
+  .leistungen { padding: 80px 0; background: white; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .card {
+    background: var(--light-bg);
+    border-radius: 14px;
+    padding: 28px 22px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(106,191,46,0.15);
+  }
+  .card-icon {
+    width: 52px; height: 52px;
+    background: white;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card h3 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .card p { font-size: 14px; color: var(--gray); line-height: 1.6; margin-bottom: 14px; }
+  .card-checks { list-style: none; }
+  .card-checks li {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 0;
+  }
+  .card-checks li::before { content: '✓'; color: var(--green); font-weight: 800; }
+  .cta-center { text-align: center; margin-top: 44px; }
+
+  /* ===== SO FUNKTIONIERT'S ===== */
+  .how { padding: 80px 0; background: var(--light-bg); }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 50px;
+  }
+  .step {
+    text-align: center;
+    padding: 32px 24px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    position: relative;
+  }
+  .step-num {
+    width: 60px; height: 60px;
+    background: var(--green);
+    color: white;
+    border-radius: 14px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+  }
+  .step h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .step p { font-size: 15px; color: var(--gray); line-height: 1.6; margin-bottom: 14px; }
+  .step-tag {
+    display: inline-block;
+    background: var(--light-bg);
+    color: var(--green);
+    font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 20px;
+    border: 1.5px solid var(--green);
+  }
+
+  /* ===== KUNDENSTIMMEN ===== */
+  .reviews { padding: 80px 0; background: white; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .review-card {
+    background: var(--light-bg);
+    border-radius: 14px;
+    padding: 28px;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .review-card:hover { border-color: var(--green); }
+  .quote-icon {
+    width: 38px; height: 38px;
+    background: var(--green);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 18px; font-weight: 900;
+    margin-bottom: 14px;
+  }
+  .stars { color: #f59e0b; font-size: 18px; margin-bottom: 14px; }
+  .review-text { font-size: 15px; line-height: 1.7; color: #374151; font-style: italic; margin-bottom: 20px; }
+  .reviewer { display: flex; align-items: center; gap: 12px; }
+  .reviewer-avatar {
+    width: 42px; height: 42px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 700; font-size: 14px;
+  }
+  .reviewer-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+  .reviewer-loc { font-size: 12px; color: var(--gray); }
+
+  /* ===== EINSATZGEBIET ===== */
+  .gebiet { padding: 80px 0; background: var(--light-bg); }
+  .gebiet-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 50px;
+  }
+  .gebiet-list-card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .gebiet-list-card h3 {
+    font-size: 16px; font-weight: 800; color: var(--navy);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+  }
+  .gebiet-list { list-style: none; }
+  .gebiet-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px; font-weight: 600; color: var(--navy);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .gebiet-list li::before { content: '●'; color: var(--green); font-size: 10px; }
+  .gebiet-list li:last-child { border-bottom: none; }
+  .gebiet-extra {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-top: 16px;
+    color: white;
+  }
+  .gebiet-extra p { font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+  .gebiet-extra a {
+    color: var(--green); font-weight: 700; text-decoration: none;
+    font-size: 14px; display: flex; align-items: center; gap: 6px;
+  }
+  .map-placeholder {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    min-height: 380px;
+    position: relative;
+  }
+  .map-placeholder iframe {
+    width: 100%; height: 380px; border: none;
+  }
+
+  /* ===== FAQ ===== */
+  .faq { padding: 80px 0; background: white; }
+  .faq-highlight {
+    background: #f0fbe6;
+    border: 2px solid var(--green);
+    border-radius: 14px;
+    padding: 22px 28px;
+    display: flex; align-items: flex-start; gap: 16px;
+    margin: 32px 0 28px;
+  }
+  .faq-highlight-icon {
+    width: 44px; height: 44px; min-width: 44px;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .faq-highlight strong { font-size: 16px; font-weight: 800; color: var(--navy); display: block; margin-bottom: 4px; }
+  .faq-highlight p { font-size: 14px; color: #374151; line-height: 1.6; }
+  .faq-items { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .faq-item:hover { border-color: var(--green); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: left;
+  }
+  .faq-arrow { font-size: 18px; transition: transform 0.3s; color: var(--green); }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    display: none;
+    padding: 0 24px 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ===== KONTAKT ===== */
+  .kontakt {
+    padding: 80px 0;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  .kontakt::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(106,191,46,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .kontakt-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .kontakt-left { color: white; }
+  .kontakt-badge {
+    display: inline-block;
+    background: rgba(106,191,46,0.2);
+    color: var(--green);
+    border: 1.5px solid var(--green);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .kontakt-left h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .kontakt-left h2 em { font-style: normal; color: var(--green); }
+  .kontakt-left p { font-size: 16px; line-height: 1.7; color: #9ca3af; margin-bottom: 32px; }
+  .kontakt-info { display: flex; flex-direction: column; gap: 14px; }
+  .kontakt-info-item {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .kontakt-info-icon {
+    width: 44px; height: 44px; min-width: 44px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .kontakt-info-item strong { display: block; font-size: 11px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .kontakt-info-item span { font-size: 16px; font-weight: 700; color: white; }
+
+  .form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .form-card h3 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+  .form-card p { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 13px; font-weight: 700;
+    color: var(--navy); margin-bottom: 6px;
+  }
+  .form-group label span { color: var(--green); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: var(--navy);
+    background: white;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--green); }
+  .form-group textarea { height: 100px; resize: none; }
+  .form-submit {
+    width: 100%;
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px; font-weight: 700;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(106,191,46,0.4);
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .form-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 10px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #111827;
+    color: white;
+    padding: 60px 0 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand p { font-size: 14px; color: #9ca3af; line-height: 1.7; margin: 14px 0 20px; }
+  .footer-brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; letter-spacing: 1px;
+    color: white;
+  }
+  .footer-brand-name span { color: var(--green); }
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25d366;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: opacity 0.2s;
+  }
+  .whatsapp-btn:hover { opacity: 0.9; }
+  .footer-col h4 {
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #6b7280;
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    color: #9ca3af; text-decoration: none; font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--green); }
+  .footer-contact-item { display: flex; align-items: center; gap: 10px; color: #9ca3af; font-size: 14px; margin-bottom: 12px; }
+  .footer-contact-item span:first-child { color: var(--green); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0;
+    font-size: 13px; color: #6b7280;
+    flex-wrap: wrap; gap: 10px;
+  }
+  .footer-bottom a { color: #6b7280; text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+
+  /* ===== SCROLL ANIMATION ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== HAMBURGER / MOBILE ===== */
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span {
+    display: block; width: 26px; height: 3px;
+    background: var(--navy); border-radius: 2px; margin: 5px 0;
+    transition: all 0.3s;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .hamburger { display: block; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; border-top: 2px solid var(--green); box-shadow: 0 8px 20px rgba(0,0,0,0.1); z-index: 999; gap: 16px; }
+    .nav-links.open { display: flex; }
+    .nav-links .nav-cta { display: none; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero h1 { font-size: 42px; }
+    .cards-grid { grid-template-columns: 1fr 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .gebiet-inner { grid-template-columns: 1fr; }
+    .kontakt-inner { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 34px; }
+  }
+  @media (max-width: 600px) {
+    .topbar-left { gap: 12px; font-size: 12px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:01772131840">📞 0177 213 1840</a>
+      <a href="mailto:info@roberts-entruempelung.de">✉ info@roberts-entruempelung.de</a>
+    </div>
+    <div class="topbar-right">📍 Einsatzgebiet: Ganz Niedersachsen</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-badge">R.</div>
+        ROBERTS <span>&nbsp;ENTRÜMPELUNG</span>
+      </a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#how">So funktioniert's</a></li>
+        <li><a href="#reviews">Kundenstimmen</a></li>
+        <li><a href="#gebiet">Einsatzgebiet</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#kontakt" class="nav-cta">📅 Kostenlose Beratung</a></li>
+      </ul>
+      <a href="#kontakt" class="btn-primary" style="display:flex;align-items:center;gap:8px;padding:12px 20px;font-size:14px;">📅 Kostenlose Beratung</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text fade-in">
+        <div class="hero-badge"><span class="dot"></span> Entrümpelung in ganz Niedersachsen</div>
+        <h1>Stressfreie Entrümpelung – <em>diskret, besenrein</em> & zum Festpreis.</h1>
+        <p class="hero-sub">Sie stehen vor einer Auflösung und wissen nicht, wohin? Wir nehmen Ihnen die komplette Last ab – von der kostenlosen Beratung vor Ort bis zur besenreinen Übergabe. Transparent, respektvoll und ohne versteckte Kosten.</p>
+        <div class="hero-btns">
+          <a href="#kontakt" class="btn-primary">📅 Kostenlose Beratung buchen</a>
+          <a href="tel:01772131840" class="btn-secondary">📞 Jetzt anrufen</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span class="icon">🛡</span> Festpreisgarantie</div>
+          <div class="trust-item"><span class="icon">♻</span> Umweltgerechte Entsorgung</div>
+          <div class="trust-item"><span class="icon">⚡</span> Termin oft in 48h</div>
+        </div>
+      </div>
+      <div class="hero-right fade-in" style="transition-delay:0.2s">
+        <img src="ChatGPT_Image_6__Mai_2026__15_39_24.png" alt="Roberts Entrümpelung Team" class="hero-logo-img">
+        <div class="hero-badge-card">
+          <span class="check">✓</span>
+          <div>
+            <div style="font-size:13px;font-weight:800;">100% Diskretion</div>
+            <div style="font-size:12px;color:#9ca3af;">Neutrales Auftreten auf Wunsch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="leistungen" id="leistungen">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-label">Unsere Leistungen</div>
+      <h2 class="section-title">Wir räumen, was Sie belastet –<br><em>professionell & gründlich.</em></h2>
+      <p class="section-sub">Egal ob Wohnung, Haus, Keller oder Gewerbe – wir übernehmen die komplette Entrümpelung und hinterlassen jeden Raum besenrein. Immer zum vereinbarten Festpreis.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card fade-in">
+        <div class="card-icon">🏠</div>
+        <h3>Haushaltsauflösung</h3>
+        <p>Komplette Auflösung von Wohnungen und Häusern – einfühlsam, diskret und termingerecht. Ideal bei Erbschaft, Umzug ins Pflegeheim oder Wohnungswechsel.</p>
+        <ul class="card-checks">
+          <li>Besenreine Übergabe</li>
+          <li>Wertanrechnung möglich</li>
+          <li>Entsorgungsnachweis</li>
+        </ul>
+      </div>
+      <div class="card fade-in" style="transition-delay:0.1s">
+        <div class="card-icon">🏢</div>
+        <h3>Firmen- & Gewerbeauflösung</h3>
+        <p>Büros, Lager, Praxen oder ganze Gewerbeeinheiten – wir räumen effizient und fachgerecht. Mit dokumentierter Entsorgung für Ihre Unterlagen.</p>
+        <ul class="card-checks">
+          <li>Auch am Wochenende</li>
+          <li>Dokumentierte Entsorgung</li>
+          <li>Festpreis für Unternehmen</li>
+        </ul>
+      </div>
+      <div class="card fade-in" style="transition-delay:0.2s">
+        <div class="card-icon">❤</div>
+        <h3>Messie-Räumung</h3>
+        <p>Mit maximaler Diskretion und Empathie. Wir verstehen die Situation, arbeiten ohne Wertung und geben den betroffenen Räumen ihre Würde zurück.</p>
+        <ul class="card-checks">
+          <li>100% Diskretion garantiert</li>
+          <li>Neutrales Auftreten</li>
+          <li>Hygienische Grundreinigung</li>
+        </ul>
+      </div>
+      <div class="card fade-in" style="transition-delay:0.3s">
+        <div class="card-icon">📦</div>
+        <h3>Keller, Garagen & Dachboden</h3>
+        <p>Der vergessene Ballast im Untergeschoss oder unterm Dach? Wir holen alles raus, entsorgen fachgerecht und Sie haben endlich wieder Platz.</p>
+        <ul class="card-checks">
+          <li>Schnell & unkompliziert</li>
+          <li>Auch Sperrmüll & Elektro</li>
+          <li>Pauschalpreis ab Anfrage</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta-center fade-in">
+      <a href="#kontakt" class="btn-primary">📅 Jetzt kostenlose Beratung vereinbaren</a>
+    </div>
+  </div>
+</section>
+
+<!-- SO FUNKTIONIERT'S -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-label">In nur 3 Schritten</div>
+      <h2 class="section-title">So einfach geht Ihre<br><em>Entrümpelung.</em></h2>
+      <p class="section-sub">Kein Papierkram, kein Stress. In drei simplen Schritten sind Sie Ihre Sorgen los – und wir übergeben besenrein.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step fade-in">
+        <div class="step-num">1</div>
+        <h3>Beratung vereinbaren</h3>
+        <p>Rufen Sie uns an oder schreiben Sie uns – wir kommen kostenlos und unverbindlich zu Ihnen vor Ort. Kein Risiko, kein Kleingedrucktes.</p>
+        <span class="step-tag">Kostenlos & unverbindlich</span>
+      </div>
+      <div class="step fade-in" style="transition-delay:0.1s">
+        <div class="step-num">2</div>
+        <h3>Festpreisangebot erhalten</h3>
+        <p>Sie erhalten ein transparentes Angebot mit Festpreis. Was wir Ihnen sagen, gilt – keine Nachforderungen, keine Überraschungen.</p>
+        <span class="step-tag">Festpreisgarantie</span>
+      </div>
+      <div class="step fade-in" style="transition-delay:0.2s">
+        <div class="step-num">3</div>
+        <h3>Zurücklehnen – wir übergeben besenrein</h3>
+        <p>Unser Team räumt, entsorgt und reinigt. Sie müssen sich um nichts kümmern. Am Ende übergeben wir den Raum besenrein – garantiert.</p>
+        <span class="step-tag">Besenreine Übergabe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KUNDENSTIMMEN -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-label">Das sagen unsere Kunden</div>
+      <h2 class="section-title">Vertrauen, das man <em>spürt.</em></h2>
+      <p class="section-sub">Wir wissen: Hinter jeder Entrümpelung steckt eine persönliche Geschichte. Deshalb behandeln wir jeden Auftrag mit Respekt und Sorgfalt.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">„Nach dem Tod meines Vaters stand ich vor einem vollen Haus und wusste nicht weiter. Das Team von Roberts hat alles mit unglaublichem Respekt und Feingefühl geräumt. Eine riesige Entlastung in einer schweren Zeit."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Monika K.</div>
+            <div class="reviewer-loc">Haushaltsauflösung in Hannover</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in" style="transition-delay:0.1s">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">„Ich musste als Hausverwalterin kurzfristig eine vermüllte Wohnung räumen lassen. Roberts war innerhalb von zwei Tagen da, hat alles professionell erledigt und die Wohnung besenrein übergeben. Absolut empfehlenswert!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SB</div>
+          <div>
+            <div class="reviewer-name">Sandra B.</div>
+            <div class="reviewer-loc">Messie-Räumung in Braunschweig</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in" style="transition-delay:0.2s">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">„Den Keller meiner Eltern entrümpeln zu lassen, habe ich jahrelang vor mir hergeschoben. Roberts hat das in einem halben Tag erledigt – Festpreis, keine Überraschungen. Hätte ich viel früher machen sollen!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TH</div>
+          <div>
+            <div class="reviewer-name">Thomas H.</div>
+            <div class="reviewer-loc">Kellerentrümpelung in Celle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EINSATZGEBIET -->
+<section class="gebiet" id="gebiet">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-label">Immer in Ihrer Nähe</div>
+      <h2 class="section-title">Unser Einsatzgebiet: <em>Ganz Niedersachsen</em></h2>
+      <p class="section-sub">Von Hannover bis Göttingen, von Braunschweig bis Oldenburg – wir sind in ganz Niedersachsen für Sie da. Schnelle Anfahrt, faire Preise, egal wo in Niedersachsen.</p>
+    </div>
+    <div class="gebiet-inner">
+      <div>
+        <div class="gebiet-list-card fade-in">
+          <h3>📍 Häufige Einsatzorte</h3>
+          <ul class="gebiet-list">
+            <li>Hannover & Umgebung</li>
+            <li>Braunschweig & Wolfsburg</li>
+            <li>Göttingen & Hildesheim</li>
+            <li>Oldenburg & Osnabrück</li>
+            <li>Celle & Lüneburg</li>
+            <li>Wilhelmshaven & Emden</li>
+            <li>+ ganz Niedersachsen auf Anfrage</li>
+          </ul>
+        </div>
+        <div class="gebiet-extra fade-in" style="transition-delay:0.1s">
+          <p>Ihr Ort ist nicht dabei? Kein Problem – wir fahren in ganz Niedersachsen. Fragen Sie einfach unverbindlich an.</p>
+          <a href="#kontakt">Jetzt Kontakt aufnehmen →</a>
+        </div>
+      </div>
+      <div class="map-placeholder fade-in" style="transition-delay:0.2s">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d627789.5!2d9.7320!3d52.6367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00b514d494f85%3A0x425ac6d94ac4720!2sNiedersachsen!5e0!3m2!1sde!2sde!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Einsatzgebiet Niedersachsen">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-label">Häufige Fragen</div>
+      <h2 class="section-title">Ihre Fragen – <em>unsere Antworten.</em></h2>
+      <p class="section-sub">Wir wissen, dass eine Entrümpelung viele Fragen aufwirft. Hier finden Sie die wichtigsten Antworten auf einen Blick.</p>
+    </div>
+    <div class="faq-highlight fade-in">
+      <div class="faq-highlight-icon">🛡</div>
+      <div>
+        <strong>Null Risiko für Sie: Kostenlose Beratung + Festpreisgarantie</strong>
+        <p>Die Vor-Ort-Beratung ist immer kostenlos und unverbindlich. Der Preis, den wir Ihnen nennen, ist der Preis, den Sie zahlen. Keine Nachforderungen, keine Überraschungen – schriftlich garantiert.</p>
+      </div>
+    </div>
+    <div class="faq-items fade-in">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Was kostet eine Entrümpelung?
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">Die Kosten hängen vom Umfang der Entrümpelung ab – Größe, Menge und Art der Gegenstände spielen eine Rolle. Deshalb bieten wir immer eine kostenlose Besichtigung vor Ort an, um Ihnen ein genaues Festpreisangebot machen zu können. Keine versteckten Kosten, keine Nachforderungen.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Wie schnell können Sie einen Termin anbieten?
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">In der Regel können wir innerhalb von 24–48 Stunden einen Besichtigungstermin anbieten. Bei dringendem Bedarf versuchen wir, noch schneller zu reagieren. Rufen Sie uns einfach an!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Was passiert mit brauchbaren Gegenständen?
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">Wertvolle oder noch brauchbare Gegenstände werden bei der Preiskalkulation berücksichtigt – eine Wertanrechnung ist möglich. Vieles wird gespendet oder weiterverkauft, sodass nichts unnötig weggeworfen wird.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Arbeiten Sie diskret? Ich schäme mich für den Zustand der Wohnung.
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">Absolut. Diskretion und Respekt stehen bei uns an erster Stelle. Wir arbeiten ohne Wertung und auf Wunsch in ziviler Kleidung und ohne auffällige Fahrzeugbeschriftung. Jeder Mensch und jede Situation verdient Würde.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Was bedeutet „besenreine Übergabe"?
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">Nach unserer Arbeit übergeben wir die Räume ausgefegt und grob gereinigt – frei von Möbeln, Gegenständen und grobem Schmutz. Die Räume sind dann bereit für einen Umzug, eine Renovierung oder für Besichtigungen.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Entsorgen Sie auch Sondermüll oder Elektrogeräte?
+          <span class="faq-arrow">⌄</span>
+        </button>
+        <div class="faq-a">Ja! Wir entsorgen fachgerecht Elektrogeräte, Sperrmüll und auf Anfrage auch Sondermüll. Alle Entsorgungen werden dokumentiert und Sie erhalten auf Wunsch einen Entsorgungsnachweis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="kontakt" id="kontakt">
+  <div class="container">
+    <div class="kontakt-inner">
+      <div class="kontakt-left fade-in">
+        <div class="kontakt-badge">Jetzt starten</div>
+        <h2>Lassen Sie die Last hinter sich – <em>wir kümmern uns.</em></h2>
+        <p>Sie verdienen einen sauberen Neuanfang. Schreiben Sie uns oder rufen Sie direkt an – die Erstberatung ist immer kostenlos und unverbindlich. Kein Risiko, kein Kleingedrucktes.</p>
+        <div class="kontakt-info">
+          <div class="kontakt-info-item">
+            <div class="kontakt-info-icon">📞</div>
+            <div>
+              <strong>Telefon</strong>
+              <span>0177 213 1840</span>
+            </div>
+          </div>
+          <div class="kontakt-info-item">
+            <div class="kontakt-info-icon">✉</div>
+            <div>
+              <strong>E-Mail</strong>
+              <span>info@roberts-entruempelung.de</span>
+            </div>
+          </div>
+          <div class="kontakt-info-item">
+            <div class="kontakt-info-icon" style="background:#25d366">💬</div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>Direkt schreiben</span>
+            </div>
+          </div>
+          <div class="kontakt-info-item">
+            <div class="kontakt-info-icon">📍</div>
+            <div>
+              <strong>Adresse</strong>
+              <span>Celler Str. 17, 30161 Hannover</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in" style="transition-delay:0.2s">
+        <div class="form-card">
+          <h3>Kostenlose Beratung anfragen</h3>
+          <p>Füllen Sie das Formular aus – wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+          <div class="form-group">
+            <label>Ihr Name <span>*</span></label>
+            <input type="text" placeholder="Max Mustermann">
+          </div>
+          <div class="form-group">
+            <label>Telefonnummer <span>*</span></label>
+            <input type="tel" placeholder="0177 123 456 78">
+          </div>
+          <div class="form-group">
+            <label>E-Mail Adresse</label>
+            <input type="email" placeholder="max@beispiel.de">
+          </div>
+          <div class="form-group">
+            <label>Was soll geräumt werden? <span>*</span></label>
+            <select>
+              <option value="">Bitte auswählen...</option>
+              <option>Wohnung / Haushaltsauflösung</option>
+              <option>Keller / Dachboden / Garage</option>
+              <option>Messie-Räumung</option>
+              <option>Firmen- / Gewerbeauflösung</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Zusätzliche Informationen</label>
+            <textarea placeholder="z.B. Etage, Aufzug vorhanden, gewünschter Zeitraum..."></textarea>
+          </div>
+          <button class="form-submit">📅 Kostenlose Beratung anfragen</button>
+          <p class="form-note">Kostenlos & unverbindlich. Wir melden uns schnellstmöglich bei Ihnen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">ROBERTS <span>ENTRÜMPELUNG</span></div>
+        <p>Professionelle Entrümpelung und Haushaltsauflösung in ganz Niedersachsen. Diskret, besenrein und immer zum Festpreis.</p>
+        <a href="https://wa.me/491772131840" class="whatsapp-btn">💬 WhatsApp</a>
+      </div>
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">Haushaltsauflösung</a></li>
+          <li><a href="#leistungen">Firmen- & Gewerbeauflösung</a></li>
+          <li><a href="#leistungen">Messie-Räumung</a></li>
+          <li><a href="#leistungen">Keller- & Dachbodenentrümpelung</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informationen</h4>
+        <ul>
+          <li><a href="#how">So funktioniert's</a></li>
+          <li><a href="#reviews">Kundenstimmen</a></li>
+          <li><a href="#gebiet">Einsatzgebiet</a></li>
+          <li><a href="#faq">Häufige Fragen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <div class="footer-contact-item"><span>📞</span> 0177 213 1840</div>
+        <div class="footer-contact-item"><span>✉</span> info@roberts-entruempelung.de</div>
+        <div class="footer-contact-item"><span>📍</span> Celler Str. 17, 30161 Hannover</div>
+        <div class="footer-contact-item"><span>🕐</span> Mo. – So. 24h erreichbar</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Roberts Entrümpelung & Haushaltsauflösung. Alle Rechte vorbehalten.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
